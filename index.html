@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Truth Countdown</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: "Courier New", monospace;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        h2 {
+            font-size: 1.2em;
+            font-style: italic;
+        }
+        .line {
+            border-top: 2px solid white;
+            margin: 20px 0;
+        }
+        .footer {
+            font-size: 1em;
+        }
+        .footer-line {
+            border-top: 2px solid white;
+            margin: 30px 0;
+        }
+        .binary-text {
+            font-family: "Brush Script MT", cursive;
+            font-size: 1.5em;
+        }
+        .small-text {
+            font-size: 0.9em;
+            font-style: italic;
+        }
+        .hidden-source {
+            display: none;
+        }
+        .countdown {
+            font-size: 3em;
+            font-family: "Courier New", monospace;
+        }
+        .test-message {
+            font-size: 2em;
+            color: white;
+        }
+        .final-message {
+            font-size: 1.5em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <h1>The Truth</h1>
+    <div class="line"></div>
+    <h2>The end is nigh. 1/21/25 is fast approaching.</h2>
+
+    <!-- Countdown Timer Section for 1/21/25 -->
+    <div id="countdown" class="countdown">Loading countdown...</div>
+
+    <div class="line"></div>
+
+    <!-- Keyhole Image -->
+    <img src="https://media.istockphoto.com/id/1393763141/vector/keyhole-key-hole-icon-door-keyhole-shape-of-lock-of-door-white-key-hole-isolated-on-black.jpg?s=612x612&w=0&k=20&c=dK-vUZU0nnKIm6ayTMlP2q5kBqRg_dHeY5evah8as2g=" alt="Keyhole Image">
+
+    <div class="line"></div>
+
+    <!-- Contact and Legal Information -->
+    <p class="footer">Questions? Don't wanna die? Email: <a href="mailto:Example@example.com" style="color: white;">Example@example.com</a></p>
+    <p class="footer">Copyright Shintofian gods, 1941</p>
+    <p class="footer">1/21/25 21:40 PM UTC</p>
+    <p class="footer">19/103/204 42:17 SUT</p>
+
+    <div class="footer-line"></div>
+
+    <!-- Binary Code Section -->
+    <p class="binary-text">01011001 01101111 01110101 00100000 01110100 01101000 01101001 01101110 01101011 00100000 01110100 01101000 01101001 01110011 00100000 01101001 01110011 00100000 01100001 00100000 01101000 01101001 01101110 01110100 00111111 00100000 01000111 01101111 01101111 01100100 00100000 01110100 01110010 01111001 00101110 00100000 01000100 01101001 01100111 00100000 01100100 01100101 01100101 01110000 01100101 01110010 00101110 00100000 01001001 01101110 01110011 01110000 01100101 01100011 01110100 00100000 01110011 01101111 01101101 01100101 01110100 01101000 01101001 01101110 01100111 00101110</p>
+
+    <div class="footer-line"></div>
+
+    <!-- Final Message Section -->
+    <div id="finalMessage" class="final-message" style="display: none;">
+        Don't think you're getting the truth THAT easily. There's other stuff in the source code, though.. You're close!
+    </div>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Jan 21, 2025 16:40:00 EST").getTime();
+
+        // Update the countdown every 1 second
+        var x = setInterval(function() {
+
+            // Get the current date and time
+            var now = new Date().getTime();
+
+            // Find the distance between now and the count down date
+            var distance = countDownDate - now;
+
+            // Time calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Output the result in the element with id="countdown"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+            // If the countdown is over, display a new message
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "";
+                document.getElementById("finalMessage").style.display = "block";
+            }
+        }, 1000);
+    </script>
+
+    <!-- Hidden Text in Source Code!! If you're seeing this you're a nerd. -->
+    <!--
+    Good job! Now go through every color shown on this website.. which will be pretty easy and decode them somehow. 
+    Email us gods once you think you got it!! You could also email us for a hint yknow...
+    -->
+
+</body>
+</html>
